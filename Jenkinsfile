@@ -8,13 +8,6 @@ pipeline {
                 git 'https://github.com/sonugupta4166/portfilio.git'
             }
         }
-
-        stage('Build with Maven') {
-            steps {
-                sh 'mvn clean package'
-            }
-        }
-
         stage('Build Docker Image') {
             steps {
                 sh 'docker build -t portfolio:v1 .'

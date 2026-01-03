@@ -26,7 +26,7 @@ pipeline {
                 docker rm portfolio || true
 
                 echo "Starting new container..."
-                docker run -d -p 8081:80 --name portfolio portfolio:v1
+                docker run -d -p 9090:80 --name portfolio portfolio:v1
                 '''
             }
         }
